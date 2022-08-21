@@ -1,6 +1,6 @@
 <img align="right" width="150px" src="https://raw.githubusercontent.com/zeromicro/zero-doc/main/doc/images/go-zero.png">
 
-# go-zero试试
+# go-zero
 
 English | [简体中文](readme-cn.md)
 
