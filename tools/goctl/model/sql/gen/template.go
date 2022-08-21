@@ -12,6 +12,7 @@ const (
 	deleteTemplateFile                    = "delete.tpl"
 	deleteMethodTemplateFile              = "interface-delete.tpl"
 	fieldTemplateFile                     = "field.tpl"
+	fieldPtrTemplateFile                  = "field-point.tpl"
 	findOneTemplateFile                   = "find-one.tpl"
 	findOneMethodTemplateFile             = "interface-find-one.tpl"
 	findOneByFieldTemplateFile            = "find-one-by-field.tpl"

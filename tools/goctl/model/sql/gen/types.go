@@ -13,7 +13,10 @@ func genTypes(table Table, methods string, withCache bool) (string, error) {
 	if err != nil {
 		return "", err
 	}
-
+	fieldsPtrString, err := genFieldsPtr(table, fields)
+	if err != nil {
+		return "", err
+	}
 	text, err := pathx.LoadTemplate(category, typesTemplateFile, template.Types)
 	if err != nil {
 		return "", err
@@ -27,6 +30,7 @@ func genTypes(table Table, methods string, withCache bool) (string, error) {
 			"upperStartCamelObject": table.Name.ToCamel(),
 			"lowerStartCamelObject": stringx.From(table.Name.ToCamel()).Untitle(),
 			"fields":                fieldsString,
+			"filedsPtr":             fieldsPtrString,
 			"data":                  table,
 		})
 	if err != nil {
